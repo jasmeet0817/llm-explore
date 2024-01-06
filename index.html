@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body { background-color: #343a40; }
+        .card { background-color: #495057; }
+        .text-light { color: #f8f9fa; }
+        .custom-file-upload {
+            border: 1px solid #adb5bd;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            text-align: center;
+            background-color: #6c757d;
+            color: white;
+            border-radius: 0.25rem;
+        }
+        #fileInput {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center text-light" style="min-height: 100vh;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="mb-4 text-center">Upload LCA Paper</h2>
+                <div class="card p-4">
+                    <div class="mb-3">
+                        <p class="text-center">Upload an LCA Paper and chat with it.</p>
+                    </div>
+                    <label for="fileInput" class="custom-file-upload">Upload File</label>
+                    <input type="file" id="fileInput" class="form-control mb-3" onsubmit="uploadFile()">         
+                               <button onclick="uploadFile()" class="btn btn-primary btn-block">Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
