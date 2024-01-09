@@ -1,0 +1,29 @@
+.custom-file-upload {
+    border: 1px solid #adb5bd;
+    display: inline-block;
+    padding: 6px 6px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    text-align: center;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 0.25rem;
+}
+.custom-field {
+    border: 1px solid #adb5bd;
+    display: inline-block;
+    padding-bottom: 6px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: white;
+    border-radius: 0.25rem;
+}
+.file-name {
+    margin-bottom: 6px;
+}
+#fileInput {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}

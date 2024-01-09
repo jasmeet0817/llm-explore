@@ -1,0 +1,17 @@
+#chatWindow {
+    overflow-y: hidden;
+    color: white;
+}
+
+.container-fluid {
+    flex: 1;
+    margin: 20px;
+}
+
+.input-group {
+    margin: 28px;
+}
+
+#sendButton {
+    margin: 0 40px 0 20px;
+}
