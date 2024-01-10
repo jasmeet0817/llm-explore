@@ -2,7 +2,7 @@ function uploadFile(file) {
   var formData = new FormData();
   formData.append("file", file);
 
-  return fetch("http://localhost:5000/upload", {
+  return fetch(SERVER_ADDRESS + "/lcachat-upload", {
     method: "POST",
     body: formData,
     mode: "cors",
@@ -31,7 +31,7 @@ function formSubmit() {
   var formData = new FormData();
   formData.append("fileId", fileId);
 
-  fetch("http://localhost:5000/resume", {
+  fetch(SERVER_ADDRESS + "/lcachat-resume", {
     method: "POST",
     body: formData,
     mode: "cors",
@@ -45,7 +45,11 @@ function formSubmit() {
 
 function handleResponse(response) {
   response.json().then((resp) => {
-    window.location.href = "chatbot.html?fileId=" + resp.fileId;
+    if (response.status != 200) {
+        alert(resp.error);
+        return;
+    }
+    window.location.href = "lcachat/chatbot.html?fileId=" + resp.fileId + "&fileName=" + resp.fileName;
   });
 }
 

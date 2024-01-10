@@ -8,8 +8,8 @@ $(document).ready(function() {
             if(message) {
                 $('#chatWindow').append('<div class="p-2"><b>You</b><br/>' + message + '</div>');
                 $('#messageInput').val('');
+                chat_backend(fileId, message);
             }
-            chat_backend(fileId, message);
         });
     
         $('#messageInput').keypress(function(e) {
@@ -29,7 +29,7 @@ function chat_backend(fileId, message) {
         const formData = new FormData();
         formData.append("fileId", fileId);
         formData.append("message", message);
-        return fetch("http://localhost:5000/chat", {
+        return fetch(SERVER_ADDRESS + "/lcachat-chat", {
                 method: "POST",
                 body: formData,
                 mode: "cors",

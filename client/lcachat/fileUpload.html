@@ -2,15 +2,14 @@
 <html>
         <head>
                 <title>File Upload</title>
-                <link
-                        rel="stylesheet"
-                        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-                <style>
-                        @import url("commonRules.css");
-                        @import url("fileUpload.css");
-                </style>
+                
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+                <link rel="stylesheet" href="{{ url_for('static', filename='lcachat/commonRules.css') }}">
+                <link rel="stylesheet" href="{{ url_for('static', filename='lcachat/fileUpload.css') }}">
+
                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                <script src="fileUpload.js"></script>
+                <script src="{{ url_for('static', filename='lcachat/common.js') }}"></script>
+                <script src="{{ url_for('static', filename='lcachat/fileUpload.js') }}"></script>
         </head>
         <body
                 class="d-flex align-items-center justify-content-center text-light"
