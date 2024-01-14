@@ -6,8 +6,8 @@ app.register_blueprint(lca_chat)
 
 # Set the port number and certificate/key file paths
 port = 80
-# cert_file = 'ssl-certs/fullchain.pem'
-# key_file = 'ssl-certs/privkey.pem'
+cert_file = 'server/ssl-certs/fullchain.pem'
+key_file = 'server/ssl-certs/privkey.pem'
 
 
 @app.route("/")
@@ -17,7 +17,7 @@ def home():
 
 if __name__ == '__main__':
     app.run(
-        # ssl_context=(cert_file, key_file), 
+        ssl_context=(cert_file, key_file), 
         port=port,
         debug=True)
     
