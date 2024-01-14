@@ -17,6 +17,7 @@ def home():
 
 if __name__ == '__main__':
     app.run(
+        '0.0.0.0',
         ssl_context=(cert_file, key_file), 
         port=port,
         debug=True)
