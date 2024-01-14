@@ -135,8 +135,17 @@ def chat():
         return chat_pdf_response.text, chat_pdf_response.status_code
 
 
+#################### PAGES  ####################
+
+@lca_chat.route('/lcachat/fileUpload.html', methods=['GET'])
+def fileUpload_html():
+    return render_template('lcachat/fileUpload.html')
+
+
 @lca_chat.route('/lcachat/chatbot.html', methods=['GET'])
 def chatbot_html():
     fileId = request.args.get('fileId')
     fileName = request.args.get('fileName')
     return render_template('lcachat/chatbot.html', fileId=fileId, fileName=fileName)
+
+#################### PAGES  ####################

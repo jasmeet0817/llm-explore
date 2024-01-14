@@ -1,4 +1,4 @@
-from flask import Flask,render_template, request
+from flask import Flask,render_template, redirect, request, url_for
 from server.lcachat.lcachat import lca_chat
 
 app = Flask(__name__, template_folder='client')
@@ -12,7 +12,7 @@ key_file = 'server/ssl-certs/privkey.pem'
 
 @app.route("/")
 def home():
-    return render_template('lcachat/fileUpload.html')
+    return redirect(url_for('lca_chat.fileUpload_html'))
 
 
 if __name__ == '__main__':
