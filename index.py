@@ -5,7 +5,7 @@ app = Flask(__name__, template_folder='client')
 app.register_blueprint(lca_chat)
 
 # Set the port number and certificate/key file paths
-port = 80
+port = 443
 cert_file = 'server/ssl-certs/fullchain.pem'
 key_file = 'server/ssl-certs/privkey.pem'
 
